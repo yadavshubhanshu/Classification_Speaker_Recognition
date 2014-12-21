@@ -2,6 +2,6 @@
 1. Download the repo from github.
 In MATLAB:- 
 2. Add the "Speaker Recognition" folder to the path.
-3. Go to the "Classification_Speech_Music" folder.
+3. Go to the "Classification_Speaker_Recognition" folder. Basically, the root folder
 4. To run the main implementation, write "run implementation1.m" in the MATLAB command line.
 5. To run the BIC based classification, write "run implementation_bic.m" in the MATLAB command line.
