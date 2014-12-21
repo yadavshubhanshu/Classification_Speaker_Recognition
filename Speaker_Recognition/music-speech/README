@@ -1,0 +1,85 @@
+README for /u/drspeech/data/music-speech
+
+2001-03-07 DAn Ellis <dpwe@ee.columbia.edu>
+2005-03-17: added labfiles, notes
+
+This directory contains a set of some 240 15-second extracts collected
+'at random' from the radio by Eric Scheirer during his internship at
+Interval Research Corporation in the summer of 1996.  This is the
+database used in:
+
+  E. Scheirer & M. Slaney (1997)
+  Construction And Evaluation Of A Robust Multifeature Speech/music
+  Discriminator 
+  Proc. ICASSP-97, Munich.
+  http://rvl4.ecn.purdue.edu/~malcolm/interval/1996-085/SpeechMusicICASSP97.pdf
+
+It was also used, for comparison, in the paper Gethin and I did:
+
+  G. Williams & D. Ellis (1999)
+  Speech/music discrimination based on posterior probability features 
+  Proc. Eurospeech-99, Budapest. 
+  ftp://ftp.icsi.berkeley.edu/pub/speech/papers/euro99-mussp.pdf
+
+The data is broken up into training and test portions, and further
+categorized as containing speech, music (with or without vocals),
+speech over music, plus a few examples of 'other' (birdsong).  
+
+Gethin and I produced a complete lexical transcript of the set
+(including the spanish utterances!), it is in wrdfile/musicspeech.ref .
+The wrdfile/ directory includes a messy pile of derivative files that
+we used for various tests.
+
+In 2001, Adam Berenzweig produced time-aligned labels for all the music 
+data to distinguish between the vocals and musical accompaniment parts. 
+This was used to train a vocals/music discriminator, described in:
+
+  A.L. Berenzweig & D.P.W. Ellis (2001)
+  Locating singing voice segments within music signals
+  Proc. IEEE WASPAA, Mohonk NY, October 2001.
+  http://www.ee.columbia.edu/~dpwe/pubs/waspaa01-singing.pdf
+
+Label files for the speech and music portions only (not the m+s) are
+included in the mvlabfile directory, in <start> <duration> <label> format, 
+where start and duration are in seconds.  For the speech only files, 
+the labels are simply one line: "0 15.000 speech".  For the 
+music files, there can be several lines indicating segments of 
+"mus" (just instruments) and "vox" (vocals over instruments).  
+
+When preparing the labels, we found that files 2, 3, 12, 14, 17 and 21
+in the test/music/novocals directory did in fact contain vocals (and
+are labelled accordingly).
+
+Originally, there was a file 61 in the training/music directory, but it 
+was a garbage file and has now been removed.
+
+Here's a brief list of directories:
+
+159504  ./wavfile                       Contains all 245 audio files, 
+					each in MSWAV format, each 15s long
+
+13044   ./wavfile/test/speech		20 examples of speech alone
+13696   ./wavfile/test/music/novocals	21 examples of music without vocals
+13044   ./wavfile/test/music/vocals	20 examples of music with vocals
+
+39124   ./wavfile/train/speech		60 examples of speech alone
+39124   ./wavfile/train/music		60 examples of music (vocal+novocal)
+38844   ./wavfile/train/m+s		60 examples of music-over-speech
+2612    ./wavfile/train/other		4 examples of environmental sound
+
+764	./mvlabfile			Partial mirror of ./wavfile with 
+					speech/mus/vox labels (Feb 02)
+
+256     ./wrdfile			Transcripts; musicspeech.ref is master
+
+2856    ./dctfile			Dictionary covering musicspeech.ref
+
+8       ./ftrfile			feacalc_hist shows ftr calc commands
+
+20      ./scripts			Various scripts from recog expts
+
+28      ./list				RANGES defines some utt ranges
+
+163444  .
+
+* end *

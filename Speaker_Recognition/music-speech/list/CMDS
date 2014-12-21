@@ -1,0 +1,3 @@
+sed -e "s/.aiff//" < ../experiments/dpwe/asr/musicspeech.list > ! musicspeech.list
+linecat -sr 181:241 musicspeech.list > trn-music.list
+linecat -sr 41:60 musicspeech.list > test-musvox.list

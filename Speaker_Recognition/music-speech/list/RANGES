@@ -1,0 +1,10 @@
+test-speech 0:19/16
+novocals 20:40
+vocals 41:60
+train-speech 61:120/78,79
+train-m+s 121-180/138,149-151
+music: 181:241
+other: 242:245
+all-speech 0:19,61:120/16,78,79
+all-music 20:60,181:241
+all 0:245

@@ -1,0 +1,1 @@
+qnsfwd ftr1_file=musicspeech-plp12N.pf ftr1_ftr_count=13 window_extent=9 ftr1_window_len=9 init_weight_file=/u/drspeech/data/bn/src/simplebn/boot-plp12N-16k-70h-aI5+117i+2000h+54o.wts mlp3_input_size=117 mlp3_hidden_size=2000 mlp3_output_size=54 mlp3_output_type=softmax activation_file=musicspeech-plp12N-2000HU.lna activation_format=lna8
